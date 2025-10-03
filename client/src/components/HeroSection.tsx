@@ -4,9 +4,11 @@ import { Download, ArrowDown } from "lucide-react";
 
 const roles = [
   "Frontend Developer",
-  "ReactJS Specialist", 
+  "ReactJS Specialist",
   "UI/UX Enthusiast",
-  "Web Developer"
+  "Web Developer", 
+  "Learning Backend Development",
+  "AI Models"
 ];
 
 export function HeroSection() {
@@ -43,14 +45,13 @@ export function HeroSection() {
 
   const handleDownloadResume = () => {
     // TODO: Replace with actual resume URL
-    const resumeUrl = "/resume.pdf";
+    const resumeUrl = "../../src/resumes/Malla_Chanikya_Satish_resume.pdf";
     const link = document.createElement("a");
     link.href = resumeUrl;
-    link.download = "Chanikya_Satish_Malla_Resume.pdf";
+    link.download = "Malla_Chanikya_Satish_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    console.log("Resume download triggered");
   };
 
   const scrollToAbout = () => {
@@ -64,7 +65,7 @@ export function HeroSection() {
     <section id="hero" className="min-h-screen flex items-center justify-center relative">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-chart-2/5 pointer-events-none" />
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -127,9 +128,12 @@ export function HeroSection() {
             <div className="relative">
               <div className="w-80 h-80 rounded-full bg-gradient-to-br from-primary/20 to-chart-2/20 p-1">
                 <div className="w-full h-full rounded-full bg-gradient-to-br from-primary to-chart-2 p-1">
-                  <div className="w-full h-full rounded-full bg-card flex items-center justify-center">
-                    {/* TODO: Replace with actual profile image */}
-                    <div className="text-6xl" data-testid="profile-placeholder">👨‍💻</div>
+                  <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden">
+                    <img
+                      src="../../src/images/satish.png"
+                      alt="Profile Image"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>
@@ -141,6 +145,9 @@ export function HeroSection() {
               <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-chart-2/10 rounded-full flex items-center justify-center">
                 <span className="text-2xl">💻</span>
               </div>
+              <div className="absolute -top-2 -left-2 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                <span className="text-2xl">🚀</span>
+              </div>  
             </div>
           </div>
         </div>

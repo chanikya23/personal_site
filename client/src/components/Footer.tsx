@@ -9,12 +9,12 @@ const socialLinks = [
   },
   {
     icon: Linkedin,
-    href: "https://linkedin.com/in/chanikya-malla", // TODO: Replace with actual LinkedIn
+    href: "https://www.linkedin.com/in/malla-chanikya-satish/",
     label: "LinkedIn"
   },
   {
     icon: Github,
-    href: "https://github.com/chanikya-malla", // TODO: Replace with actual GitHub
+    href: "https://github.com/chanikya23",
     label: "GitHub"
   }
 ];

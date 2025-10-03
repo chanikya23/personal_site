@@ -3,13 +3,17 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, Filter } from "lucide-react";
+import asr from "./../images/asr.png";
+import bitrush from "./../images/Bitrush.png";
+import aichat from "./../images/aichatbot.png";
+import jarvis from "./../images/jarvis.png";
 
 const projects = [
   {
     id: 1,
     title: "ASR Solar Mission",
     description: "I built the ASR Solar Mission website end-to-end with responsive design across all devices. It includes pages like Home, About, Services, Projects, Brands, and Contact, with interactive features such as a mobile call button. The site was deployed using Vercel with DNS setup for production.",
-    image: "🌞", // TODO: Replace with actual image
+    image: asr,
     liveUrl: "https://asrsolarmission.com/",
     githubUrl: null,
     technologies: ["HTML", "Bootstrap", "React", "JavaScript", "Git", "Vercel"],
@@ -22,7 +26,7 @@ const projects = [
     id: 2,
     title: "BiteRush - Web App",
     description: "Built a Swiggy-like food delivery app leveraging real-time APIs to showcase live restaurant data and menus. Created a responsive and user-friendly interface using React, Bootstrap, and Material UI. Implemented Redux for dynamic cart state management and integrated secure authentication for smooth performance.",
-    image: "🍔", // TODO: Replace with actual image
+    image: bitrush,
     liveUrl: null,
     githubUrl: null,
     technologies: ["HTML", "Bootstrap", "React", "Redux", "JavaScript"],
@@ -35,7 +39,7 @@ const projects = [
     id: 3,
     title: "AI Chatbot",
     description: "Developed a chatbot for instant user query responses using Gemini AI API. Enabled contextual responses with support for custom data sources.",
-    image: "🤖", // TODO: Replace with actual image
+    image: aichat,
     liveUrl: "https://aichatbot-smoky-five.vercel.app/",
     githubUrl: null,
     technologies: ["HTML", "CSS", "JavaScript", "Gemini AI API"],
@@ -48,7 +52,7 @@ const projects = [
     id: 4,
     title: "Jarvis - Personal Voice Assistant",
     description: "Developed a Python-based voice assistant for laptops, enabling hands-free interaction through voice commands. Integrated speech recognition libraries like Speech-Recognition and PocketSphinx to convert voice to text. Utilized NLP tools such as NLTK and Speech Recognition to interpret user intent and execute commands effectively.",
-    image: "🎤", // TODO: Replace with actual image
+    image: jarvis,
     liveUrl: null,
     githubUrl: null,
     technologies: ["Python", "NLP", "Speech Recognition", "Pyttsx3", "OS"],
@@ -68,7 +72,7 @@ export function ProjectsSection() {
 
   const filteredProjects = projects.filter(project => {
     const categoryMatch = selectedCategory === "all" || project.category === selectedCategory;
-    const techMatch = !selectedTech || project.technologies.some(tech => 
+    const techMatch = !selectedTech || project.technologies.some(tech =>
       tech.toLowerCase().includes(selectedTech.toLowerCase())
     );
     return categoryMatch && techMatch;
@@ -85,7 +89,7 @@ export function ProjectsSection() {
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-primary to-chart-2 rounded-full mx-auto" />
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              A showcase of my recent work, demonstrating my expertise in modern web development 
+              A showcase of my recent work, demonstrating my expertise in modern web development
               and innovative solutions.
             </p>
           </div>
@@ -106,7 +110,7 @@ export function ProjectsSection() {
                 </Button>
               ))}
             </div>
-            
+
             <div className="flex gap-2 justify-center">
               <Button
                 variant="outline"
@@ -134,25 +138,19 @@ export function ProjectsSection() {
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 gap-8">
             {filteredProjects.map((project) => (
-              <Card 
-                key={project.id} 
-                className="group hover-elevate transition-all duration-300 overflow-hidden"
+              <Card
+                key={project.id}
+                className="group hover-elevate transition-all duration-300 overflow-hidden cursor-pointer"
               >
                 {/* Project Image/Icon */}
                 <div className="aspect-video bg-gradient-to-br from-primary/10 to-chart-2/10 flex items-center justify-center">
-                  <span className="text-6xl" data-testid={`project-image-${project.id}`}>
-                    {project.image}
-                  </span>
-                  {project.featured && (
-                    <Badge className="absolute top-4 left-4" data-testid={`project-featured-${project.id}`}>
-                      Featured
-                    </Badge>
-                  )}
-                  {project.status === "live" && (
-                    <Badge variant="secondary" className="absolute top-4 right-4" data-testid={`project-status-${project.id}`}>
-                      Live
-                    </Badge>
-                  )}
+
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="object-contain w-full h-full"
+                    data-testid={`project-image-${project.id}`}
+                  />
                 </div>
 
                 {/* Content */}
@@ -174,9 +172,9 @@ export function ProjectsSection() {
                   {/* Technologies */}
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
-                      <Badge 
-                        key={tech} 
-                        variant="outline" 
+                      <Badge
+                        key={tech}
+                        variant="outline"
                         className="text-xs"
                         data-testid={`project-tech-${project.id}-${tech.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
                       >

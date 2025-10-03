@@ -3,9 +3,10 @@ import { Badge } from "@/components/ui/badge";
 
 const skills = [
   "JavaScript (ES6+)", "React.js", "Redux Toolkit", "TypeScript", 
-  "HTML5", "CSS3", "Tailwind CSS", "Material UI", "Bootstrap",
+  "HTML5", "CSS3", "Tailwind CSS", "Bootstrap","Material UI", "Bootstrap",
   "Chart.js", "REST APIs", "Git/GitHub", "Responsive Design",
-  "Performance Optimization", "Code Splitting"
+  "Performance Optimization", "Code Splitting", "Node.js", "Express.js", "Postman",
+  "Jira", "VS Code", "Python", "SQL"
 ];
 
 const highlights = [
@@ -61,10 +62,15 @@ export function AboutSection() {
               <p>
                 My goal is to deliver <span className="text-foreground font-medium">high-quality solutions</span> that balance technical excellence with real-world business impact.
               </p>
+
+              <p>
+                🚀 Beyond frontend development, I’m actively exploring AI, Replit, and AI-powered developer tools—understanding how AI models can simplify workflows, automate repetitive tasks, and unlock new levels of productivity for developers.
+              </p>
             </div>
 
             {/* Skills */}
-            <div className="space-y-4">
+            <div className="py-20">
+            <div className="space-y-6" id="technicalskills">
               <h3 className="text-xl font-semibold" data-testid="heading-skills">
                 Technical Skills
               </h3>
@@ -81,6 +87,7 @@ export function AboutSection() {
                 ))}
               </div>
             </div>
+            </div>
           </div>
 
           {/* Highlights and Image */}
@@ -91,7 +98,9 @@ export function AboutSection() {
                 <div className="w-64 h-80 rounded-2xl bg-gradient-to-br from-primary/10 to-chart-2/10 p-1">
                   <div className="w-full h-full rounded-2xl bg-card flex items-center justify-center">
                     {/* TODO: Replace with actual about image */}
-                    <div className="text-4xl" data-testid="about-image-placeholder">🧑‍💼</div>
+                    <div className="text-4xl" data-testid="about-image-placeholder">
+                      <img src='../src/images/pic1.jpg' alt='about me'/>
+                    </div>
                   </div>
                 </div>
               </div>

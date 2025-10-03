@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Github, Linkedin } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
@@ -32,17 +33,17 @@ const socialLinks = [
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://linkedin.com/in/chanikya-malla" // TODO: Replace with actual LinkedIn
+    href: "https://www.linkedin.com/in/malla-chanikya-satish/"
   },
   {
     icon: Github,
     label: "GitHub", 
-    href: "https://github.com/chanikya-malla" // TODO: Replace with actual GitHub
+    href: "https://github.com/chanikya23"
   },
   {
-    icon: Twitter,
-    label: "Twitter",
-    href: "https://twitter.com/chanikya_malla" // TODO: Replace with actual Twitter
+    icon: FaWhatsapp,
+    label: "WhatsApp",
+    href: "https://wa.me/918367339798"
   }
 ];
 
@@ -65,38 +66,43 @@ export function ContactSection() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      // TODO: Replace with actual form submission logic
-      console.log("Form submitted:", formData);
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  try {
+    const response = await fetch("path for google forms", {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (response.ok) {
       toast({
         title: "Message sent successfully!",
         description: "Thank you for reaching out. I'll get back to you soon.",
       });
-      
-      // Reset form
+        
       setFormData({
         name: "",
         email: "",
         subject: "",
         message: ""
       });
-    } catch (error) {
-      toast({
-        title: "Error sending message",
-        description: "Please try again or contact me directly via email.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
+    } else {
+      throw new Error("Failed to send message");
     }
-  };
+  } catch (error) {
+    toast({
+      title: "Error sending message",
+      description: "Please try again or contact me directly via email/phone call",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <section id="contact" className="py-20 bg-muted/30">

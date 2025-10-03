@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 
 const navigation = [
   { name: "About", href: "#about" },
+  { name: "Skills", href: "#technicalskills" },
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
@@ -48,7 +49,7 @@ export function Header() {
               className="text-xl font-bold hover-elevate px-2 py-1 rounded-md transition-colors"
               data-testid="button-logo"
             >
-              Chanikya
+              Chanikya | SDE
             </button>
 
             {/* Desktop Navigation */}
