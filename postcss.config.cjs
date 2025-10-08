@@ -13,5 +13,6 @@ module.exports = {
     tailwindcss,
     autoprefixer,
   ],
+   from: undefined,
 };
 
