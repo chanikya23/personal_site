@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import profilePic from "../images/pic1.jpg";
 
 const skills = [
   "JavaScript (ES6+)", "React.js", "Redux Toolkit", "TypeScript", 
@@ -99,7 +100,7 @@ export function AboutSection() {
                   <div className="w-full h-full rounded-2xl bg-card flex items-center justify-center">
                     {/* TODO: Replace with actual about image */}
                     <div className="text-4xl" data-testid="about-image-placeholder">
-                      <img src='../src/images/pic1.jpg' alt='about me'/>
+                      <img src={profilePic} alt='about me'/>
                     </div>
                   </div>
                 </div>

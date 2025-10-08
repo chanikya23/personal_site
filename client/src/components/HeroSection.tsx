@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Download, ArrowDown } from "lucide-react";
+import profileImg from "../images/satish.png";
 
 const roles = [
   "Frontend Developer",
@@ -130,7 +131,7 @@ export function HeroSection() {
                 <div className="w-full h-full rounded-full bg-gradient-to-br from-primary to-chart-2 p-1">
                   <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden">
                     <img
-                      src="../../src/images/satish.png"
+                      src={profileImg}
                       alt="Profile Image"
                       className="w-full h-full object-cover"
                     />
