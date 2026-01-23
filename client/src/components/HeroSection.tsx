@@ -7,7 +7,7 @@ const roles = [
   "Frontend Developer",
   "ReactJS Specialist",
   "UI/UX Enthusiast",
-  "Web Developer", 
+  "Web Developer",
   "Learning Backend Development",
   "AI Models"
 ];
@@ -46,10 +46,10 @@ export function HeroSection() {
 
   const handleDownloadResume = () => {
     // TODO: Replace with actual resume URL
-    const resumeUrl = "../../src/resumes/Malla_Chanikya_Satish_resume.pdf";
+    const resumeUrl = "../../src/resumes/Malla_Satish_resume.pdf";
     const link = document.createElement("a");
     link.href = resumeUrl;
-    link.download = "Malla_Chanikya_Satish_Resume.pdf";
+    link.download = "Malla_Satish_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -138,7 +138,7 @@ export function HeroSection() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                 <span className="text-2xl">⚛️</span>
@@ -148,7 +148,7 @@ export function HeroSection() {
               </div>
               <div className="absolute -top-2 -left-2 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                 <span className="text-2xl">🚀</span>
-              </div>  
+              </div>
             </div>
           </div>
         </div>

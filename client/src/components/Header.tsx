@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 
 const navigation = [
   { name: "About", href: "#about" },
-  { name: "Skills", href: "#technicalskills" },
+  { name: "Skills", href: "#skills" },
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
@@ -35,11 +35,10 @@ export function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          isScrolled 
-            ? "bg-background/80 backdrop-blur-md border-b border-border" 
-            : "bg-transparent"
-        }`}
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
+          ? "bg-background/80 backdrop-blur-md border-b border-border"
+          : "bg-transparent"
+          }`}
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
