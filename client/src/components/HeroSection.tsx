@@ -110,7 +110,7 @@ export function HeroSection() {
             {/* Quick stats */}
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary" data-testid="stat-experience">2+</div>
+                <div className="text-2xl font-bold text-primary" data-testid="stat-experience">2.3+</div>
                 <div className="text-sm text-muted-foreground">Years Experience</div>
               </div>
               <div className="text-center">

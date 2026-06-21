@@ -5,6 +5,21 @@ import { Calendar, MapPin } from "lucide-react";
 const experiences = [
   {
     id: 1,
+    role: "Software Developer",
+    company: "CodingLimits Pvt Ltd",
+    location: "Nellore",
+    duration: "Nov 2025 - Jan 2026",
+    type: "Full-time",
+    description: "Developed and optimized AI-powered interview platform features using Next.js and TypeScript, delivering highly responsive candidate and enterprise-focused mock interview modules.",
+    keyProjects: [
+      "AI Mock Interview and analytics platform utilizing GPT integration for real-time assessment and feedback",
+      "Interactive conversational features with Speech-to-Text and Text-to-Speech integration via React Speech Recognition",
+      "Enterprise screening workflows and subscription payment systems to support candidate progress tracking at scale"
+    ],
+    technologies: ["Next.js", "React.js", "TypeScript", "Tailwind CSS", "REST APIs", "AI Integration"]
+  },
+  {
+    id: 2,
     role: "React JS Developer",
     company: "POSGURU PRIVATE LIMITED",
     location: "Remote",
@@ -18,7 +33,7 @@ const experiences = [
     technologies: ["JavaScript", "React.js", "Redux", "Material UI", "Bootstrap", "Chart.JS"]
   },
   {
-    id: 2,
+    id: 3,
     role: "Software - Frontend UI Developer",
     company: "ASU Technologies & Services Pvt Ltd.",
     location: "Hybrid",
@@ -33,7 +48,7 @@ const experiences = [
     technologies: ["JavaScript", "React.js", "Redux", "SCSS", "Material UI", "Auth0", "Python"]
   },
   {
-    id: 3,
+    id: 4,
     role: "Personal Project",
     company: "BiteRush - Web App",
     location: "Self-directed",

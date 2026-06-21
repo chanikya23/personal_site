@@ -44,7 +44,7 @@ export function AboutSection() {
 
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p>
-                I am a <span className="text-foreground font-medium">Frontend Developer</span> with <span className="text-primary font-medium">2+ years of professional experience</span>, specializing in building and optimizing scalable, responsive, and user-centric web applications.
+                I am a <span className="text-foreground font-medium">Frontend Developer</span> with <span className="text-primary font-medium">2.3+ years of professional experience</span>, specializing in building and optimizing scalable, responsive, and user-centric web applications.
               </p>
 
               <p>
