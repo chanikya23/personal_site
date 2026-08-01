@@ -47,7 +47,7 @@ export function HeroSection() {
 
   const handleDownloadResume = () => {
     // TODO: Replace with actual resume URL
-    const resumeUrl = "/resumes/Chanikya_Satish_FrontendDeveloper.pdf";
+    const resumeUrl = "/resumes/Chanikya_Satish_SDE.pdf";
     const link = document.createElement("a");
     link.href = resumeUrl;
     link.download = "Chanikya_Satish_Resume.pdf";
