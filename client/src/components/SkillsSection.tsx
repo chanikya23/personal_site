@@ -4,7 +4,9 @@ import {
     SiTailwindcss, SiMui, SiNodedotjs, SiExpress, SiMongodb, SiPostgresql,
     SiPython, SiGit, SiGithub, SiPostman, SiDocker
 } from "react-icons/si";
-import { FaRocket, FaTerminal, FaCode, FaRobot, FaBrain } from "react-icons/fa"; // Generic icons for AI/Tools
+import { DiMsqlServer } from "react-icons/di";
+import { TbBrandDatabricks } from "react-icons/tb";
+import { FaRocket, FaTerminal, FaCode, FaRobot, FaBrain, FaPython  } from "react-icons/fa"; // Generic icons for AI/Tools
 import { Card } from "@/components/ui/card";
 
 const skills = [
@@ -22,15 +24,16 @@ const skills = [
     { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
     { name: "Express.js", icon: SiExpress, color: "#9f2b2bff" },
     { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-    // { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
-    { name: "Python", icon: SiPython, color: "#3776AB" },
 
     // Tools
     { name: "Git", icon: SiGit, color: "#F05032" },
-    // { name: "GitHub", icon: SiGithub, color: "#181717" },
-    // { name: "Docker", icon: SiDocker, color: "#2496ED" },
     { name: "Postman", icon: SiPostman, color: "#FF6C37" },
     { name: "VS Code", icon: FaCode, color: "#007ACC" },
+
+    //Data Engineering
+    { name: "MSSQL Server", icon: DiMsqlServer, color: "#336791" },
+    { name: "Databricks", icon: TbBrandDatabricks, color: "#2496ED" },
+    { name: "Python", icon: SiPython, color: "#3776AB" },
 
     // AI
     { name: "ChatGPT", icon: FaRobot, color: "#412991" },

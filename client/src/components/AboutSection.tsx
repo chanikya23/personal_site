@@ -17,6 +17,11 @@ const highlights = [
     description: "Creating cross-device compatible applications that enhance user experience"
   },
   {
+  icon: "📊",
+  title: "Data Engineering Enthusiast",
+  description: "Currently learning Python, SQL Server, Databricks, and PySpark."
+},
+  {
     icon: "🤖",
     title: "AI Integration",
     description: "Leveraging modern AI tools to accelerate development and build smart features"
@@ -44,7 +49,7 @@ export function AboutSection() {
 
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p>
-                I am a <span className="text-foreground font-medium">Frontend Developer</span> with <span className="text-primary font-medium">2.3+ years of professional experience</span>, specializing in building and optimizing scalable, responsive, and user-centric web applications.
+                I am a <span className="text-foreground font-medium">Software Developer</span> with <span className="text-primary font-medium">2.3 years of professional experience</span>, specializing in building and optimizing scalable, responsive, and user-centric web applications.
               </p>
 
               <p>
@@ -56,7 +61,7 @@ export function AboutSection() {
               </p>
 
               <p>
-                I'm actively integrating AI workflows using tools like AntiGravity, Cursor, and Claude to enhance productivity and build smarter applications.
+                Currently exploring Data Engineering with Python, SQL Server, Databricks, and PySpark while building end-to-end data engineering projects.
               </p>
             </div>
 

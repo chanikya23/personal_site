@@ -47,10 +47,10 @@ export function HeroSection() {
 
   const handleDownloadResume = () => {
     // TODO: Replace with actual resume URL
-    const resumeUrl = "../../src/resumes/Malla_Satish_resume.pdf";
+    const resumeUrl = "../../src/resumes/Chanikya_Satish_FrontendDeveloper.pdf";
     const link = document.createElement("a");
     link.href = resumeUrl;
-    link.download = "Malla_Satish_Resume.pdf";
+    link.download = "Chanikya_Satish_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -111,7 +111,7 @@ export function HeroSection() {
             {/* Quick stats */}
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary" data-testid="stat-experience">2.3+</div>
+                <div className="text-2xl font-bold text-primary" data-testid="stat-experience">2+</div>
                 <div className="text-sm text-muted-foreground">Years Experience</div>
               </div>
               <div className="text-center">
