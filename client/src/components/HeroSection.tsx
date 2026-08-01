@@ -4,9 +4,10 @@ import { Download, ArrowDown } from "lucide-react";
 import profileImg from "../images/satish.png";
 
 const roles = [
+  "Software Developer",
   "Frontend Developer",
   "ReactJS Specialist",
-  "UI/UX Enthusiast",
+  "Data Engineering",
   "Web Developer",
   "Learning Backend Development",
   "AI Models"
